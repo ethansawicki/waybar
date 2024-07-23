@@ -1,0 +1,30 @@
+//Waybar new config
+[{
+    "layer": "top", // Waybar at top layer
+    "height": 7,
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "width": 2000, // Waybar width
+    "output": ["DP-2"],
+    "include": [
+    	"~/.config/waybar/modules.json"
+    ],
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["custom/gpu-temp","pulseaudio", "clock", "tray", "custom/lock", "custom/power"],
+    
+},
+{
+	"layer": "top", // Waybar at top layer
+    "height": 7,
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "width": 3000, // Waybar width
+    "output": ["DP-3"],
+    "include": [
+    	"~/.config/waybar/modules.json"
+    ],
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["custom/gpu-temp", "pulseaudio", "clock", "tray", "custom/lock", "custom/power"],   
+}]
