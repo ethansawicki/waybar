@@ -1,39 +1,18 @@
 @import "colors.css";
 
-* {
-  font-family: FantasqueSansMono Nerd Font;
-  font-size: 17px;
-  min-height: 0;
+*{
+	font-family: FantasqueSansMono Nerd Font;
+	font-size: 20px;
 }
 
-#waybar {
-  background: transparent;
-  color: @text;
-  margin: 5px 5px;
-  border-radius: 2px;
-}
-
-#workspaces {
-  border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface3;
-  margin-left: 5px;
+window#waybar {
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 15px;
 }
 
 #workspaces button {
-  color: @lavender;
-  border-radius: 1rem;
-  padding: 0.4rem;
-}
-
-#workspaces button.active {
-  color: @sky;
-  border-radius: 1rem;
-}
-
-#workspaces button:hover {
-  color: @sapphire;
-  border-radius: 1rem;
+	background-color: transparent;
+	color: #ffffff;
 }
 
 #custom-music,
@@ -43,22 +22,21 @@
 #pulseaudio,
 #custom-lock,
 #custom-power {
-  background-color: @surface3;
   padding: 0.5rem 1rem;
   margin: 5px 0;
 }
 
 #clock {
   color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
-
 }
 
 #pulseaudio {
   color: @yellow;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+}
+
+#pulseaudio:hover {
+	background-color: transparent;
+	color: #ffffff;
 }
 
 #custom-music {
@@ -67,25 +45,16 @@
 }
 
 #custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
     color: @lavender;
 }
 
 #custom-gpu-temp {
-  border-radius: 1rem;
-  margin-right: 1rem;
   color: @green;
   border-style: solid;
   border-color: #ffffff;
 }
 
 #custom-power {
-    margin-right: 1;
     border-radius: 0px 1rem 1rem 0px;
     color: @red;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
 }

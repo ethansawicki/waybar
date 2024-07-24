@@ -7,6 +7,10 @@
              "default": " ",
          },
      },
+     "hyprland/window": {
+        "max-length": 200,
+        "separate-outputs": true
+     },
 	"tray": {
         "icon-size": 21,
         "spacing": 10
@@ -52,11 +56,11 @@
     },
     "custom/gpu-temp": {
         "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
-        "format": "GPU  {}",
+        "format": "GPU  {}",
         "interval": 5 
     }
     // "temperature": {
     //     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    //     "format": "CPU  {temperatureC}"
+    //     "format": "CPU  {temperatureC}"
     // }
 }
