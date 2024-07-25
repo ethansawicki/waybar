@@ -2,7 +2,7 @@
 	"hyprland/workspaces": {
          "disable-scroll": true,
          "sort-by-name": true,
-         "format": " {icon} ",
+         "format": "{icon}",
          "format-icons": {
              "default": " ",
          },
@@ -16,24 +16,23 @@
         "spacing": 10
     },
     "custom/music": {
-        "format": "  {}",
+        "format": "{icon} {}",
         "escape": true,
-        "interval": 5,
         "tooltip": false,
-        "exec": "playerctl metadata --format='{{ title }}'",
+        "format-icons": {
+            "default": "",
+            "pause": "",
+            "stop": ""
+        },
+        "exec": "playerctl metadata --format='{{artist}} - {{ title }}' --follow",
         "on-click": "playerctl play-pause",
-        "max-length": 50
+        "max-length": 50,
     },
     "clock": {
         "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": " {:%m/%d/%Y}",
         "format": " {:%I:%M %p}"
-    },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -58,9 +57,10 @@
         "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
         "format": "GPU  {}",
         "interval": 5 
+    },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "format": "CPU  {temperatureC}",
+        "interval": 5
     }
-    // "temperature": {
-    //     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    //     "format": "CPU  {temperatureC}"
-    // }
 }

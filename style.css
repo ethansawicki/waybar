@@ -21,6 +21,7 @@ window#waybar {
 #clock,
 #pulseaudio,
 #custom-lock,
+#temperature,
 #custom-power {
   padding: 0.5rem 1rem;
   margin: 5px 0;
@@ -52,6 +53,10 @@ window#waybar {
   color: @green;
   border-style: solid;
   border-color: #ffffff;
+}
+
+#temperature {
+	color: @red;
 }
 
 #custom-power {
